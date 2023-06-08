@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Attribute</title>
+</head>
+<body>
+    <div id="abcd">
+        
+
+    </div>
+</body>
+<script>
+//we can do using for loop also
+    let image =  [
+        "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/baby-krishna-ashutosh-mishra.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhGL7grzz0iYousbk2o1GpkvqcPlLb1M0Zy0cVlRgTcukt5dYTYPKYMdBCUkNtXOFMVmk&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnFURve6ZPUjpy-hMobfuuyKi8GsWv34qNZWbTRWrZCudUWcIimPCCkakhlZu9gbVUNzU&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW3e59XerjYxHRi9JJ-ZLZILSp_mXCouPuHac9POLk6jl6NtHLnszkAjGYJVLLmxgPYGw&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCJkkDUJmLdlmuQL9aThS4f1_7kYLTfeG7JL-E5Khl1CXYBeuYxRgb83fWdTJnbcevpaE&usqp=CAU"
+]
+let cont = document.getElementById('abcd');
+image.forEach((element,index)=>{
+    let myImg = document.createElement("img");
+    myImg.setAttribute("src",element);
+    cont.append(myImg);
+})
+//second way  to set images using for loop
+for(let i=0;i<image.length;i++){
+    let myImg = document.createElement("img");
+    myImg.setAttribute("src",image[i])
+    cont.append(myImg)
+}
+</script>
+</html>

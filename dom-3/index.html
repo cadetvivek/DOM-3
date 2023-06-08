@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-3</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+<script>
+    let arr = ["i am heading-1",
+    "i am heading-1",
+    "i am heading-1",
+    "i am heading-1",
+    "i am heading-1",
+    "i am heading-1"];
+let cont = document.getElementById("container");
+let heading = document.createElement("h2");
+heading.innerText='Some Rendoom Text'
+cont.append(heading)
+for(let i=0;i<arr.length;i++){
+    // how to give html text
+let heading = document.createElement('h1')
+
+heading.innerText=arr[i]
+//put insite container
+
+heading.style.color='green'
+cont.append(heading)
+}
+// can we do for each loo
+// map , forEach, filter,sort
+ 
+arr.forEach((element,index)=>{
+    let heading = document.createElement('h1')
+console.log(element,index)
+heading.innerText=element
+//put insite container
+
+heading.style.color='red' 
+cont.append(heading)
+})
+</script>
+</html>

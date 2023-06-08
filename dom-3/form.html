@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form id="abcd">
+        <h1 id="heading">Sign up form</h1>
+        <input type="text" name="" id="name" placeholder="name">
+        <input type="email" id="email" placeholder="Eamil">
+        <input type="password"  id="password" placeholder="password">
+        <input type="submit" value="Sing up">
+    </form>
+    <!-- <h1>SingIn Form</h1>
+   <form>
+    <input type="email" id="email" placeholder="Eamil">
+    <input type="password"  id="password" placeholder="password">
+    <input type="submit" value="Sing in">
+</form> -->
+</body>
+<script>
+let form = document.getElementById('abcd');
+let heading = document.getElementById("heading")
+let nameInp=document.getElementById("name")
+
+form.addEventListener("submit",(e)=>{
+    //stop geting refrsh
+    e.preventDefault()
+    //get value all this way
+    console.log("Ok")
+    heading.style.color='red'
+    console.log(nameInp.value)
+    console.log(form.name.value)
+    console.log(form.email.value)
+    console.log(form.password.value)
+ let formData={
+    name: form.name.value,
+    email: form.email.value,
+    password: form.password.value
+ }
+ console.log(form)
+})
+</script>
+</html> 
